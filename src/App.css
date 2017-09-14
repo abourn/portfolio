@@ -48,3 +48,36 @@ nav {
   width: 100%;
   text-align: center;
 }
+
+.projects {
+  background-color: #ebebeb;
+  padding: 10px;
+}
+
+h2 {
+  margin: 10px;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  padding-top: 10px;
+}
+
+.content {
+  background-color: white;
+  border-color: #dfdfdf;
+  border-radius: 3px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.image {
+  background-image: url(./SQL.png);
+  background-size: cover;
+  height: 150px;
+  background-position: top;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.textContent {
+  margin: 15px;
+}
