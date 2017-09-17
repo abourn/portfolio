@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import * as ProjectsConst from './projects.js';
 
 class App extends Component {
+
+
   render() {
+    var projectsArray = ProjectsConst.projects.map(function(project, i) {
+      return <Project key={i} title={project.title} description={project.description} imageUrl={project.imageUrl} />
+    });
+
     return (
       <div className="App">
         <section className="about">
@@ -26,7 +33,7 @@ class App extends Component {
         </section>
         <section name="projectsSection" className="projects">
           <h2>Projects</h2>
-          <Project />
+          {projectsArray}
         </section>
       </div>
     );
@@ -35,14 +42,17 @@ class App extends Component {
 
 class Project extends Component {
   render() {
+    var imgStyle = {
+      backgroundImage: "url(" + this.props.imageUrl + ")"
+    }
     return (
       <div className="flex-container container">
         <div className="flex-column">
           <div className="content">
-            <div className="image"></div>
+            <div className="image" style={imgStyle}></div>
             <div className="textContent">
-              <h3>Note Taking</h3>
-              <p>Having trouble remembering those little details? Take a Pencil with you and jot them down wherever you go.  IF you make a mistake, erase it and start over.</p>
+              <h3>{this.props.title}</h3>
+              <p>{this.props.description}</p>
           </div>
         </div>
       </div>
