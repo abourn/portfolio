@@ -5,12 +5,10 @@ import * as ProjectsConst from './projects.js';
 
 class App extends Component {
 
-
   render() {
     var projectsArray = ProjectsConst.projects.map(function(project, i) {
-      return <Project key={i} title={project.title} description={project.description} imageUrl={project.imageUrl} />
+      return <Project key={i} title={project.title} description={project.description} imageUrl={project.imageUrl} githubLink={project.githubLink} otherLink={project.otherLink}/>
     });
-
     return (
       <div className="App">
         <section className="about">
@@ -33,7 +31,9 @@ class App extends Component {
         </section>
         <section name="projectsSection" className="projects">
           <h2>Projects</h2>
-          {projectsArray}
+          <div className="flex-container container">
+              {projectsArray}
+          </div>
         </section>
       </div>
     );
@@ -41,22 +41,32 @@ class App extends Component {
 }
 
 class Project extends Component {
+
   render() {
     var imgStyle = {
       backgroundImage: "url(" + this.props.imageUrl + ")"
     }
+
+    var content = <div></div>
+    if (this.props.githubLink) {
+      content = <a href={this.props.githubLink} target="_blank"><i className="fa fa-github fa-2x linkStyle"></i></a>
+    } else if (this.props.otherLink) {
+      content = <a href={this.props.otherLink} target="_blank"><i className="fa fa-external-link fa-2x linkStyle"></i></a>
+    }
     return (
-      <div className="flex-container container">
-        <div className="flex-column">
-          <div className="content">
-            <div className="image" style={imgStyle}></div>
-            <div className="textContent">
-              <h3>{this.props.title}</h3>
-              <p>{this.props.description}</p>
+      <div className="flex-column">
+        <div className="content">
+          <div className="image" style={imgStyle}></div>
+          <div className="textContent">
+            <h3>{this.props.title}</h3>
+            {content}
+            <hr></hr>
+            <p>{this.props.description} </p>
+
           </div>
         </div>
       </div>
-    </div>
+
     );
   }
 }
