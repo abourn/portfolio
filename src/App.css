@@ -4,9 +4,13 @@ body {
 
 .about {
   height:100vh;
-  background-image: url(./lake.JPG);
+  background-image: url(./img/lake.JPG);
   background-size: cover;
   background-position: center;
+  color: white;
+}
+
+.about i {
   color: white;
 }
 
@@ -94,12 +98,6 @@ h2 {
   flex-grow: 1;
 }
 
-@media screen and (min-width: 987px) {
-  .flex-column {
-    flex-basis: 50%;
-  }
-}
-
 .linkStyle {
   color: black;
   float: right;
@@ -108,4 +106,10 @@ h2 {
 h3 {
   display: inline;
   margin-bottom: 5px;
+}
+
+@media screen and (min-width: 987px) {
+  .flex-column {
+    flex-basis: 50%;
+  }
 }

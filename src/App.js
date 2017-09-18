@@ -26,10 +26,10 @@ class App extends Component {
             <p>Senior | Informatics | University of Washington</p>
           </div>
           <div className="arrowContainer">
-            <a><i className="fa fa-angle-down fa-3x faa-passing animated"></i></a>
+            <a href="#projectsSection"><i className="fa fa-angle-down fa-3x faa-passing animated"></i></a>
           </div>
         </section>
-        <section name="projectsSection" className="projects">
+        <section id="projectsSection" className="projects">
           <h2>Projects</h2>
           <div className="flex-container container">
               {projectsArray}
