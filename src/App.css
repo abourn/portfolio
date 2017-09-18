@@ -68,7 +68,7 @@ h2 {
   border-radius: 3px;
   margin: 10px;
   padding: 10px;
-  height: 425px;
+  height: 100%;
 }
 
 .image {
@@ -81,7 +81,6 @@ h2 {
 
 .textContent {
   margin: 15px;
-  display: block;
 }
 
 .flex-container {
@@ -91,8 +90,14 @@ h2 {
 
 .flex-column {
   display: flex;
-  flex-basis: 50%;
+  flex-basis: 100%;
   flex-grow: 1;
+}
+
+@media screen and (min-width: 987px) {
+  .flex-column {
+    flex-basis: 50%;
+  }
 }
 
 .linkStyle {
