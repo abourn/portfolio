@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import * as ProjectsConst from './projects.js';
+var classNames = require('classnames');
 
 class App extends Component {
 
@@ -37,6 +38,14 @@ class App extends Component {
         </section>
       </div>
     );
+  }
+}
+
+class Skill extends Component {
+  render() {
+    return() {
+
+    }
   }
 }
 
