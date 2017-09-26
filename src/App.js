@@ -46,6 +46,7 @@ class App extends Component {
         <section id="skills">
           <h2>Skills</h2>
           {skillsArray}
+
         </section>
       </div>
     );
@@ -69,7 +70,7 @@ class Skill extends Component {
   render() {
     var coloredClass = this.state.isFaIcon ? this.props.className + " lightBlue" : this.props.className + " colored";
     return (
-      <div aria-label={this.props.label}>
+      <div className="skillIconDiv" aria-label={this.props.label}>
         <i className={this.state.hover ? coloredClass : this.props.className} onMouseEnter={this.toggleClass} onMouseLeave={this.toggleClass} aria-hidden="true"></i>
         <p>{this.props.label}</p>
       </div>
