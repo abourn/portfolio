@@ -3,7 +3,6 @@ import logo from './logo.svg';
 import './App.css';
 import * as ProjectsConst from './projects.js';
 import * as SkillsConst from './skills.js';
-var classNames = require('classnames');
 
 class App extends Component {
 
@@ -53,10 +52,23 @@ class App extends Component {
 }
 
 class Skill extends Component {
+  constructor(props) {
+    super(props);
+    this.toggleClass = this.toggleClass.bind(this);
+    this.state = {
+      hover: false
+    };
+  }
+  toggleClass() {
+    var currHoverStatus = this.state.hover;
+    this.setState({ hover: !currHoverStatus});
+  }
+
   render() {
+    var coloredClass = this.props.className + " colored";
     return (
       <div>
-        <i className={this.props.className}></i>
+        <i className={this.state.hover ? coloredClass : this.props.className} onMouseEnter={this.toggleClass} onMouseLeave={this.toggleClass}></i>
         <p>{this.props.label}</p>
       </div>
     );
