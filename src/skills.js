@@ -16,8 +16,8 @@ export const skills = [
     "label": "React"
   },
   {
-    "className": "devicon-jquery-plain",
-    "label": "jQuery"
+    "className": "fa fa-windows",
+    "label": "MS SQL Server"
   },
   {
     "className": "devicon-bootstrap-plain",
@@ -30,6 +30,10 @@ export const skills = [
   {
     "className": "devicon-java-plain",
     "label": "Java"
+  },
+  {
+    "className": "devicon-jquery-plain",
+    "label": "jQuery"
   },
   {
     "className": "devicon-git-plain",

@@ -11,7 +11,9 @@ class App extends Component {
       return <Project key={i} title={project.title} description={project.description} imageUrl={project.imageUrl} githubLink={project.githubLink} otherLink={project.otherLink}/>
     });
     var skillsArray = SkillsConst.skills.map(function(skill, i) {
-      return  <Skill key={i} className={skill.className} label={skill.label} />
+      var isFontAwesome = false;
+      if (skill.className.startsWith('fa')) { isFontAwesome = true; }
+      return  <Skill key={i} className={skill.className} label={skill.label} isFaIcon={isFontAwesome} />
     });
 
     return (
@@ -21,9 +23,10 @@ class App extends Component {
             <header>
               <h1>Adam Bourn</h1>
               <nav>
-                <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
-                <a href="https://drive.google.com/file/d/0B8Mc9nigpockVUR1QkE3UVcyX00/view?usp=sharing" target="_blank">Resume</a>
+                <a href="mailto:adam.john.bourn@gmail.com" aria-label="Send me an email!"><i className="fa fa-envelope" aria-hidden="true"></i></a>
+                <a href="https://docs.google.com/document/d/1jEiRZnaubNicQYxiQdG8h6AQpUk_GO_GcADuoreUuC8/edit?usp=sharing" aria-label="Resume" target="_blank"><i className="fa fa-file-text" aria-hidden="true"></i></a>
+                <a href="https://github.com/abourn" aria-label="Github Profile" target="_blank"><i className="fa fa-github" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/abourn/" aria-label="Linkedin Profile" target="_blank"><i className="fa fa-linkedin-square" aria-hidden="true"></i></a>
               </nav>
             </header>
           </div>
@@ -44,8 +47,6 @@ class App extends Component {
           <h2>Skills</h2>
           {skillsArray}
         </section>
-        <footer>
-        </footer>
       </div>
     );
   }
@@ -56,19 +57,20 @@ class Skill extends Component {
     super(props);
     this.toggleClass = this.toggleClass.bind(this);
     this.state = {
-      hover: false
+      hover: false,
+      isFaIcon: this.props.isFaIcon
     };
   }
   toggleClass() {
     var currHoverStatus = this.state.hover;
-    this.setState({ hover: !currHoverStatus});
+    this.setState({ hover: !currHoverStatus });
   }
 
   render() {
-    var coloredClass = this.props.className + " colored";
+    var coloredClass = this.state.isFaIcon ? this.props.className + " lightBlue" : this.props.className + " colored";
     return (
-      <div>
-        <i className={this.state.hover ? coloredClass : this.props.className} onMouseEnter={this.toggleClass} onMouseLeave={this.toggleClass}></i>
+      <div aria-label={this.props.label}>
+        <i className={this.state.hover ? coloredClass : this.props.className} onMouseEnter={this.toggleClass} onMouseLeave={this.toggleClass} aria-hidden="true"></i>
         <p>{this.props.label}</p>
       </div>
     );
@@ -84,9 +86,9 @@ class Project extends Component {
 
     var content = <div></div>
     if (this.props.githubLink) {
-      content = <a href={this.props.githubLink} target="_blank"><i className="fa fa-github fa-2x linkStyle"></i></a>
+      content = <a href={this.props.githubLink} target="_blank" aria-label="See this project on GitHub"><i className="fa fa-github fa-2x linkStyle" aria-hidden="true"></i></a>
     } else if (this.props.otherLink) {
-      content = <a href={this.props.otherLink} target="_blank"><i className="fa fa-external-link fa-2x linkStyle"></i></a>
+      content = <a href={this.props.otherLink} target="_blank" aria-label="See this project in a new tab"><i className="fa fa-external-link fa-2x linkStyle" aria-hidden="true"></i></a>
     }
     return (
       <div className="flex-column">
