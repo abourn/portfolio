@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import * as ProjectsConst from './projects.js';
+import * as SkillsConst from './skills.js';
 var classNames = require('classnames');
 
 class App extends Component {
@@ -10,6 +11,10 @@ class App extends Component {
     var projectsArray = ProjectsConst.projects.map(function(project, i) {
       return <Project key={i} title={project.title} description={project.description} imageUrl={project.imageUrl} githubLink={project.githubLink} otherLink={project.otherLink}/>
     });
+    var skillsArray = SkillsConst.skills.map(function(skill, i) {
+      return  <Skill key={i} className={skill.className} label={skill.label} />
+    });
+
     return (
       <div className="App">
         <section id="about">
@@ -33,61 +38,12 @@ class App extends Component {
         <section id="projects">
           <h2>Projects</h2>
           <div className="flex-container container">
-              {projectsArray}
+            {projectsArray}
           </div>
         </section>
         <section id="skills">
           <h2>Skills</h2>
-
-
-          <div>
-            <i className="devicon-html5-plain "></i>
-            <p>HTML</p>
-          </div>
-          <div>
-            <i className="devicon-css3-plain "></i>
-            <p>CSS</p>
-          </div>
-          <div>
-            <i className="devicon-javascript-plain "></i>
-            <p>Javacript</p>
-          </div>
-          <div>
-            <i className="devicon-react-original "></i>
-            <p>React</p>
-          </div>
-          <div>
-            <i className="devicon-jquery-plain "></i>
-            <p>jQuery</p>
-          </div>
-          <div>
-            <i className="devicon-bootstrap-plain "></i>
-            <p>Bootstrap</p>
-          </div>
-          <div>
-            <i className="devicon-android-plain "></i>
-            <p>Android</p>
-          </div>
-          <div>
-            <i className="devicon-java-plain "></i>
-            <p>Java</p>
-          </div>
-          <div>
-            <i className="devicon-go-plain "></i>
-            <p>Go</p>
-          </div>
-          <div>
-            <i className="devicon-git-plain "></i>
-            <p>git</p>
-          </div>
-          <div>
-            <i className="devicon-github-plain "></i>
-            <p>GitHub</p>
-          </div>
-
-
-
-
+          {skillsArray}
         </section>
         <footer>
         </footer>
@@ -98,9 +54,12 @@ class App extends Component {
 
 class Skill extends Component {
   render() {
-    return() {
-
-    }
+    return (
+      <div>
+        <i className={this.props.className}></i>
+        <p>{this.props.label}</p>
+      </div>
+    );
   }
 }
 
