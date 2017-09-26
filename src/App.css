@@ -2,8 +2,12 @@ body {
   font-family: 'Raleway';
 }
 
-.textContent i:hover, .textContent i:focus {
-  color: blue;
+a {
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 #about {
@@ -14,13 +18,10 @@ body {
   color: white;
 }
 
-#about i {
-  color: white;
-}
-
 h1, nav, nav a {
   display: inline-flex;
-  margin: 10px;
+  margin: 15px;
+  margin-top: 10px;
   color: white;
 }
 
@@ -28,13 +29,19 @@ h1 {
   float: left;
   font-size: 2.1em;
   margin-left: 2%;
-  font-weight: 400;
+  font-weight: 200;
+  margin-top: 15px;
 }
 
 nav {
   float: right;
   font-size: 1.2em;
   margin-right: 2%;
+}
+
+nav i:hover, .arrowContainer i:hover{
+  color: #4c4c4c;
+  text-decoration: none;
 }
 
 .aboutTextContainer {
@@ -56,29 +63,7 @@ nav {
   margin-top: 51%;
   width: 100%;
   text-align: center;
-}
-
-#skills {
-  text-align: center;
-  padding: 10px;
-  background-color: #F4F4F4;
-
-}
-
-#skills div {
-  display: inline-block;;
-}
-
-#skills i {
-  display: inline-block;
-  margin: 50px;
-  margin-bottom: 0px;
-  margin-top: 15px;
-  font-size: 5em;
-}
-
-.lightBlue {
-  color: #00A7F7;
+  color: white;
 }
 
 #projects {
@@ -93,7 +78,6 @@ h2 {
   padding-top: 10px;
   text-align: left;
 }
-
 
 .content {
   background-color: white;
@@ -114,6 +98,10 @@ h2 {
 
 .textContent {
   margin: 15px;
+}
+
+.textContent i:hover, .textContent i:focus {
+  color: #4c4c4c;;
 }
 
 .flex-container {
@@ -137,22 +125,26 @@ h3 {
   margin-bottom: 5px;
 }
 
-footer {
-  height: 8em;
-  background-color: #151515;
-  color: #F4F4F4;
-  display: flex;
-  flex-wrap: wrap;
-
+#skills {
+  text-align: center;
+  padding: 10px;
+  background-color: #F4F4F4;
 }
 
-footer a {
-  color: white;
-  margin: 10px;
+#skills div {
+  display: inline-block;;
 }
 
-footer a:hover {
-  color: #f4f4f4;
+#skills i {
+  display: inline-block;
+  margin: 50px;
+  margin-bottom: 0px;
+  margin-top: 15px;
+  font-size: 5em;
+}
+
+.lightBlue {
+  color: #00A7F7;
 }
 
 
@@ -160,5 +152,4 @@ footer a:hover {
   .flex-column {
     flex-basis: 50%;
   }
-
 }
