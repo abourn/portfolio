@@ -2,7 +2,11 @@ body {
   font-family: 'Raleway';
 }
 
-.about {
+.textContent i:hover, .textContent i:focus {
+  color: blue;
+}
+
+#about {
   height:100vh;
   background-image: url(./img/lake.JPG);
   background-size: cover;
@@ -10,7 +14,7 @@ body {
   color: white;
 }
 
-.about i {
+#about i {
   color: white;
 }
 
@@ -54,8 +58,24 @@ nav {
   text-align: center;
 }
 
-.projects {
-  background-color: #ebebeb;
+#skills {
+  text-align: center;
+  padding: 10px;
+  background-color: #F4F4F4;
+
+}
+
+#skills div {
+  display: inline-block;;
+}
+
+#skills i {
+  margin: 50px;
+  font-size: 5em;
+}
+
+#projects {
+  background-color: #F4F4F4;
   padding: 10px;
 }
 
@@ -64,7 +84,9 @@ h2 {
   margin-top: 0px;
   margin-bottom: 30px;
   padding-top: 10px;
+  text-align: left;
 }
+
 
 .content {
   background-color: white;
@@ -108,8 +130,16 @@ h3 {
   margin-bottom: 5px;
 }
 
+footer {
+
+  height: 8em;
+  background-color: #151515;
+  color: #F4F4F4;
+}
+
 @media screen and (min-width: 987px) {
   .flex-column {
     flex-basis: 50%;
   }
+
 }
