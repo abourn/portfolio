@@ -1,4 +1,4 @@
-My Portfolio | https://abourn.github.io/portfolio
+Portfolio | https://abourn.github.io/portfolio
 
 A simple web portfolio that I built in React.
 
