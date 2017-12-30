@@ -1,5 +1,13 @@
 export const projects = [
   {
+   "title": "Slack Clone",
+    "description": "Built the backend and a simplistic web client for a chat application with a microservice architecture.  Developed custom gateway authentication in Go and handled sessions with Redis.  Upgraded authenticated users to a Websocket connection and notified of new messages with RabbitMQ. Microservice for messaging built in Node with data stored in MongoDB. Containerized in Docker and used bash scripts for automated deployment to DigitalOcean.",
+    "imageUrl": require('./img/SlackClone.png'),
+    "skills": "Go, Docker, Node, Javascript, Redis, MongoDB, DigitalOcean, RabbitMQ, Bash",
+    "githubLink": null,
+    "otherLink": null 
+  },
+  {
     "title": "AudioRoam",
     "description": "Developed a music discovery app for Android in a team of four. Allows local artists to “drop” a song at a location, which other users can then listen to upon visiting that location, as well as read information about the song as provided by the artist. Responsible for Firebase integration, overall design, and multiple feature implementations (favorites, uploads, pins, etc).",
     "imageUrl": require('./img/AudioRoam.png'),
