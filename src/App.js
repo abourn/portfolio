@@ -24,7 +24,7 @@ class App extends Component {
               <h1>Adam Bourn</h1>
               <nav>
                 <a href="mailto:adam.john.bourn@gmail.com" aria-label="Send me an email!"><i className="fa fa-envelope" aria-hidden="true"></i></a>
-                <a href="https://docs.google.com/document/d/1jEiRZnaubNicQYxiQdG8h6AQpUk_GO_GcADuoreUuC8/edit?usp=sharing" aria-label="Resume" target="_blank"><i className="fa fa-file-text" aria-hidden="true"></i></a>
+                <a href="https://docs.google.com/document/d/1LWOaOAZtURlvT2Xo24i5QTsVel-bcyxfhTd9Xj-ZaDU/edit?usp=sharing" aria-label="Resume" target="_blank"><i className="fa fa-file-text" aria-hidden="true"></i></a>
                 <a href="https://github.com/abourn" aria-label="Github Profile" target="_blank"><i className="fa fa-github" aria-hidden="true"></i></a>
                 <a href="https://www.linkedin.com/in/abourn/" aria-label="Linkedin Profile" target="_blank"><i className="fa fa-linkedin-square" aria-hidden="true"></i></a>
               </nav>
