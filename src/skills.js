@@ -1,7 +1,11 @@
 export const skills = [
   {
-    "className": "devicon-html5-plain",
-    "label": "HTML"
+   "className": "devicon-go-plain",
+    "label": "Go" 
+  },
+  {
+   "className": "devicon-docker-plain",
+    "label": "Docker" 
   },
   {
     "className": "devicon-css3-plain",
@@ -12,8 +16,20 @@ export const skills = [
     "label": "Javascript"
   },
   {
+    "className": "devicon-jquery-plain",
+    "label": "jQuery"
+  },
+  {
     "className": "devicon-react-original",
     "label": "React"
+  },
+  {
+    "className": "devicon-redis-plain",
+    "label": "Redis" 
+  },
+  {
+   "className": "devicon-mongodb-plain",
+    "label": "Mongo" 
   },
   {
     "className": "fa fa-windows",
@@ -30,10 +46,6 @@ export const skills = [
   {
     "className": "devicon-java-plain",
     "label": "Java"
-  },
-  {
-    "className": "devicon-jquery-plain",
-    "label": "jQuery"
   },
   {
     "className": "devicon-git-plain",
